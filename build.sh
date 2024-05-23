@@ -16,7 +16,8 @@ chmod 700 rootfs/data/user/root
 chown root:root rootfs/data/user/root
 mount --bind /proc rootfs/proc
 chroot rootfs ymp clean --allow-oem
-chroot rootfs ymp rbd --allow-oem > /output/rootfs.revdeb-rebuild
+echo "##### $(date) #####" > /output/turkman-rootfs-minimal.revdeb-rebuild
+chroot rootfs ymp rbd --allow-oem >> /output/turkman-rootfs-minimal.revdeb-rebuild
 umount -lf rootfs/proc
 
 tar --gzip -cf /output/turkman-rootfs-minimal.tar.gz rootfs/*
