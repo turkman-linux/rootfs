@@ -15,4 +15,4 @@ chmod 1777 rootfs/tmp
 chmod 700 rootfs/data/user/root
 chown root:root rootfs/data/user/root
 
-tar --gzip -cfv rootfs/* /output/turkman-rootfs.tar.gz 
+tar --gzip -cfv rootfs/* /output/turkman-rootfs-minimal.tar.gz 
